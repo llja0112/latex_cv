@@ -1,0 +1,419 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INSTRUCTIONS FOR COMPILING THIS DOCUMENT ("CV.tex")
+%% TeX ---(XeLaTeX)---> PDF:
+%%
+%% Method 1: Use latexmk for fully automated document generation:
+%%   latexmk -xelatex "CV.tex"
+%%   (add the -pvc switch to automatically recompile on changes)
+%%
+%% Method 2: Use XeLaTeX directly:
+%%   xelatex "CV.tex"
+%%   (run multiple times to resolve cross-references if needed)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \documentclass[a4paper,10pt,oneside]{article}
+\documentclass[letterpaper,10pt,oneside]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TYPESETTING OPTIONS.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\TypesetInNonStopMode}{1}
+\newcommand{\TypesetInDraftMode}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{CV-Preamble.tex}
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{Anthony Li}
+\newcommand{\CVTitle}{Applicant for PhD Program}
+%\newcommand{\CVNote}{CV compiled on {\today} for Acme Corporation}
+\newcommand{\CVWebpage}{http://llja0112.github.io/bio.html}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={\CVWebpage},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+pdfpagemode={},
+bookmarks=true,
+unicode=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+colorlinks=true,
+linkcolor=blue,
+filecolor=blue,
+urlcolor=blue,}
+
+% Shorthand.
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\title{\CVAuthor}
+
+\begin{subtitle}
+%\href{https://www.google.com/maps/place/17+Prime+Avenue,+Springfield,+Pennsylvania+10111,+USA}
+{Waterloo Street Block 262 \#12-219, Singapore, 180262}
+\par
+\href{mailto:anthony_li@u.duke.nus.edu}
+{anthony\_li@u.duke.nus.edu}
+\,\SubBulletSymbol\,
++65 92385863\,
+\href{\CVWebpage}
+{\CVWebpage}
+\end{subtitle}
+
+\begin{body}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\section
+{Education}
+{Education}
+{PDF:Education}
+
+{\textbf{M.D. Doctor of Medicine}, Duke NUS Medical School}
+\hfill
+\DatestampYMD{2015}{08}{01} -- \DatestampYMD{2019}{06}{01}
+
+\GapNoBreak
+\BulletItem
+Thesis: Application of Machine Learning to Acute Coronary Syndrome patients to predict 
+\newline reinfarction and mortality
+
+\BigGap
+{\textbf{B.Eng. Electrical Engineering}, National University of Singapore}
+\hfill
+\DatestampYMD{2009}{08}{01} --
+\DatestampYMD{2013}{06}{01}
+
+\GapNoBreak
+\BulletItem
+Awarded First Class Honors (GPA: 4.5/5)
+\BulletItem
+Thesis: Automated Prostate MRI Segmentation [\href{https://drive.google.com/open?id=0B1GfPKwMcZtpdWp0aUpxMnlKbU1oLVJFbjN3bGwwcXZlVVNJ}{Thesis link}]
+\BulletItem
+Relevant Courses: Advanced Control Systems, Computer Vision, Analytical Methods in ECE
+
+\section
+{Professional Experience}
+{WorkExperience}
+{PDF:WorkExperience}
+
+{\textbf{House Officer}, Tan Tock Seng Hospital and Sengkang General Hosptial}
+\hfill
+\DatestampYMD{2019}{07}{01} --
+\DatestampYMD{2020}{06}{30}
+\BulletItem
+General Medicine at Tan Tock Seng Hospital
+\BulletItem
+General Surgery at Sengkang General Hospital: Research on NEWS to improve timeliness of CTSP
+\BulletItem
+General Medicine at Sengkang General Hospital: Automated temperature reminders to staff of General Medicine Department
+
+{\textbf{Research Medical Student}, National Heart Center Singapore}
+\hfill
+\DatestampYMD{2017}{09}{01} -- \DatestampYMD{2019}{07}{01} 
+\BulletItem 
+Performed research on predictive risk modelling for 3,885 Acute Coronary Syndrome (ACS) patients leveraging on ML methods such as XGBoost, MLP NN and LSTM RNN.
+\BulletItem
+Developed a novel method to improve ML model interpretability in ACS patients, thus identifying critical biomarkers (e.g. Creatinine, Total Cholesterol) for clinical intervention.
+
+{\textbf{Software Engineer}, Experimental Systems and Technology Lab}
+\hfill
+\DatestampYMD{2014}{10}{01} --
+\DatestampYMD{2015}{08}{01}
+\BulletItem
+Full stack development and deployment of applications for education under the Agile programming methodology. Technologies developed currently serves approximately 10,000 users.
+
+{\textbf{Senior Officer}, A*STAR, Science and Engineering Research Council}
+\hfill
+\DatestampYMD{2013}{08}{01} --
+\DatestampYMD{2014}{09}{31}
+\BulletItem
+Technology planning, grant administration and research management for Urban Systems Initiatives (S\$50 million grant), Satellite Initiatives and Infocomm Public Service Funding Research Projects.
+
+%%% Research Activities %%%%
+\section
+{Research}
+{Research}
+{PDF:Research}
+
+\textbf{Publications}
+\GapNoBreak
+\definecolor{mygray}{gray}{0.4}
+
+\begin{enumerate}
+\item Sia S. X. Y., \underline{Anthony Li}, \textcolor{mygray}{Hierarchical Module Classification in Mixed Initiative Conversational Agent System}, \textit{27th ACM Conference on Information and Knowledge Management}
+[\href{https://dl.acm.org/citation.cfm?id=3133185}{Paper link}]
+\item Xiong W., \underline{Anthony Li}, Ong S.H., Sun Y. \textcolor{mygray}{Automatic 3D Prostate MRI Segmentation Using Graph Cuts and Level Sets}, \textit{Pacific-Rim Conference on Multimedia (PCM) 2013}
+[\href{https://link.springer.com/chapter/10.1007\%2F978-3-319-03731-8_20}{Paper link}]
+\end{enumerate}
+
+%Sia S. X. Y., \underline{Anthony Li}, Hierarchical Module Classification in Mixed Initiative Conversational Agent System}, \textit{27th ACM Conference on Information and Knowledge Management} [\href{https://dl.acm.org/citation.cfm?id=3133185}{Paper link}]
+%\hfill
+%\DatestampYMD{2017}{11}{05}
+%\GapNoBreak
+%
+%Xiong W., \underline{Anthony Li}, Ong S.H., Sun Y. \textbf{Automatic 3D Prostate MRI Segmentation Using Graph Cuts and Level Sets}, \textit{Pacific-Rim Conference on Multimedia (PCM) 2013}
+%[\href{https://link.springer.com/chapter/10.1007\%2F978-3-319-03731-8_20}{Paper link}]
+%\hfill
+%\DatestampYMD{2013}{12}{13}
+%\GapNoBreak
+
+
+%%% Abstracts %%%%
+% \section
+% {Conference Abstracts}
+% {ConferenceAbstracts}
+% {PDF:ConferenceAbstracts}
+
+
+\textbf{Conference}
+\GapNoBreak
+
+\begin{enumerate}
+
+\item \underline{Anthony Li}, AO. Sahlen, \textcolor{mygray}{Improving clinical interpretation of extreme gradient boosted ensemble tree models of cardiac data with high proportions of missingness}, \textit{Machine Learning for Healthcare 2018} [Oral Presentation / Poster]
+
+\item \underline{Anthony Li}, AO. Sahlen, \textcolor{mygray}{Superior prediction of outcome in ischemic heart disease with machine learning than regression modelling: importance of missing values}, \textit{Singapore Cardiology Society 30th Annual Scientific Meeting}
+[Oral Presentation]
+
+\item \underline{Anthony Li}, Deshpande A., Sarraf-Yazdi S. \textcolor{mygray}{Making meaning out of disorienting dilemmas, assumptions and emotions: a prelude to reflective write-ups}, \textit{International Consortium of Longitudinal Integrated Clerkship 2017}
+[Oral Presentation]
+
+\item Koong H. N., Bang D., Fung F. Y., \underline{Anthony Li} \textcolor{mygray}{A replay of our tutorials: A connection back to the soul of medical education}, \textit{International Consortium of Longitudinal Integrated Clerkship 2017}
+[Conference Workshop]
+
+\end{enumerate}
+
+
+
+%\underline{Anthony Li}, AO. Sahlen \textbf{Improving clinical interpretation of extreme gradient boosted ensemble tree models of cardiac data with high proportions of missingness}, \textit{Machine Learning for Healthcare 2018} [Oral Presentation / Poster]
+%\hfill
+%\DatestampYMD{2018}{08}{17}
+%\GapNoBreak
+
+%\underline{Anthony Li}, AO. Sahlen \textbf{Superior prediction of outcome in ischemic heart disease with machine learning than regression modelling: importance of missing values}, \textit{Singapore Cardiology Society 30th Annual Scientific Meeting} [Oral Presentation]
+%\hfill
+%\DatestampYMD{2018}{03}{17}
+%\GapNoBreak
+%
+%\underline{Anthony Li}, Deshpande A., Sarraf-Yazdi S. \textbf{Making meaning out of disorienting dilemmas, assumptions and emotions: a prelude to reflective write-ups}, \textit{International Consortium of Longitudinal Integrated Clerkship 2017} [Oral Presentation]
+%\hfill
+%\DatestampYMD{2017}{10}{26}
+%\GapNoBreak
+
+%Koong H. N., Bang D., Fung F. Y., \underline{Anthony Li} \textbf{A replay of our tutorials: A connection back to the soul of medical education}, \textit{International Consortium of Longitudinal Integrated Clerkship 2017} [Conference Workshop]
+%\hfill
+%\DatestampYMD{2017}{10}{25}
+%\GapNoBreak
+
+
+%%% ACADEMIC AWARDS %%%%
+\section
+{Awards}
+{Awards}
+{PDF:Awards}
+\definecolor{mygray}{gray}{0.3}
+\textbf{2nd place}, \textcolor{mygray}{NUS-NUHS-MIT Healthcare Datathon 2018}, \textit{NUS and MIT}
+\hfill\DatestampYMD{2018}{07}{07}
+\GapNoBreak
+\BulletItem
+Leveraged on gradient boosted trees and neural networks to study complex pharmacological interactions and calculate risk of cardiovascular complications in 10,389 diabetic patients.
+\BulletItem
+Invited for call-for-proposals NUHS (in-progress)
+\GapNoBreak
+\medskip
+
+\textbf{Special prize}, \textcolor{mygray}{Grow Asia Hackathon 2018}, \textit{Unilever, Bayer, MUFG and EastVentures}
+\hfill\DatestampYMD{2018}{03}{15}
+\GapNoBreak
+\BulletItem
+Designed AI/ML smartphone application to solve traceability and sustainability in Indonesia’s \$12B smallholder oil palm industry.
+\GapNoBreak
+\medskip
+
+\textbf{3rd place}, \textcolor{mygray}{Analyticup 2017}, \textit{27th ACM CIKM}
+\hfill\DatestampYMD{2017}{11}{05}
+\GapNoBreak
+\BulletItem
+Developed an RNN-LSTM based times series risk prediction model for DHL’s temperature controlled supply chain for biomedical product shipments.
+\GapNoBreak
+\medskip
+
+\textbf{1st place}, \textcolor{mygray}{Singhealth Hackathon 2017}, \textit{Singapore General Hospital}
+\hfill\DatestampYMD{2017}{01}{22}
+\BulletItem
+Developed CHIT, a mobile application for communication and task coordination.
+\GapNoBreak
+\medskip
+
+%\textbf{MTI Borderless Award}, \textit{Ministry of Trade and Industry}
+%\hfill
+%\DatestampYMD{2014}{06}{01}
+%\BulletItem
+%Awarded for outstanding contribution to Urban Systems Initiative research on sensor networks.
+%\GapNoBreak
+
+\textbf{A*STAR Borderless Award}, \textit{Science and Engineering Research Council}
+\hfill
+\DatestampYMD{2014}{05}{01}
+\BulletItem
+Awarded for outstanding research contribution to A*STAR Data Analytics platform.
+\GapNoBreak
+\medskip
+
+\textbf{Dean's List}, \textit{National University of Singapore}
+\hfill
+\DatestampYMD{2013}{07}{01}
+\BulletItem
+Awarded to top 5\% of engineering students in academic excellence in NUS Faculty of Engineering.
+\GapNoBreak
+
+
+%%% ACADEMIC GRANTS %%%%
+\section
+{Grants}
+{Grants}
+{PDF:Grants}
+
+
+\textbf{AM ETHOS Medical Student Fellowship Grant 2017},
+\hfill\DatestampYMD{2017}{10}{01}
+\GapNoBreak
+\textit{Singhealth Duke-NUS Academic Medicine Center}
+\GapNoBreak
+\BulletItem
+Awarded a \$10,000 grant to study application of machine learning algortihms to Acute Coronary Syndrome patient PCI and echocardiograph datasets to predict patient mortality and morbidity.
+\GapNoBreak
+
+\section
+{Projects}
+{Projects}
+{PDF:Projects}
+
+\textbf{Coagulopathy in patients with COVID-19 pneumonia}
+\newline Collaborators: A/Prof Ngiam Kee Yuan and Dr Bryce Tan from NUHS as part of 4CE consortium
+\newline Hypothesis: Early anticoagulation ameliorate COVID-19 disease severity in patients with severe coagulopathy
+\GapNoBreak
+
+\textbf{Hierarchical Module Classification Visualization}
+\newline Admin page to visualize decision making process behind patient bot responses. [\href{https://github.com/llja0112/medbot-server-admin}{Project link}]
+\GapNoBreak
+
+\textbf{Reflections platform}
+\newline Platform for medical students to write and consolidate reflections. [\href{https://github.com/llja0112/reflections}{Project link}] [\href{http://reflective.me}{Website link}]
+\GapNoBreak
+
+\textbf{Clinical knowledge platform}
+\newline Clinical knowledge made accessible in the form of checklists and approaches. [\href{http:\\medbot.me}{Website link}]
+
+% \textbf{Medical Knowledge Website Scraper}
+% \newline Scrap websites for knowledge to build models for patient bots. [\href{https://github.com/llja0112/medbot-scraper}{Project link}]
+
+%%% CERTIFICATIONS %%%
+\section
+{Certifications}
+{Certifications}
+{PDF:Certifications}
+
+\textbf{\textit{Deep Learning Specialisation (16 weeks)}} Coursera/DeepLearning.AI 
+\hfill
+\DatestampYMD{2018}{06}{30}
+\BulletItem
+[\href{https://www.coursera.org/account/accomplishments/specialization/certificate/9ACYUUL2YYDD}{Certificate link}]
+
+\textbf{\textit{Probabilistic Graphical Models Specialisation (15 weeks)}} Coursera/Stanford University 
+\hfill
+\DatestampYMD{2018}{12}{01}
+\BulletItem
+[\href{https://www.coursera.org/account/accomplishments/specialization/certificate/ANDVMH29QHC6}{Certificate link}]
+
+
+\section
+{Programming}
+{Programming}
+{PDF:Programming}
+\textbf{Languages:} Python, R, C, C++, Ruby, Octave/Matlab, HTML5, Javascript, CSS, SQL
+
+\textbf{Deep Learning Frameworks:}  PyTorch, Tensorflow, Keras
+
+\textbf{Packages:} SKLearn, XGBoost, MICE, Caret, Pytorch
+
+\textbf{Tools:} Git, Latex, RStudio, Docker, Google Analytics, Jupyter Notebook, Atom
+
+\textbf{Frameworks:} Rails, Elasticsearch, Logstash, Kibana, JQuery, React, Flux
+
+%\textbf{Third party:} Heroku, Amazon Web Services, Digital Ocean, Mailgun
+%\GapNoBreak
+
+\section
+{Student Leadership}
+{Student Leadership}
+{PDF:StudentLeadership}
+
+\textbf{President}, Duke NUS Medical Technologies Student Group
+\hfill
+\DatestampYMD{2017}{08}{01} -- \DatestampYMD{2018}{08}{01} 
+\GapNoBreak
+\textbf{Vice President}, Duke NUS Emergency Medicine Student Group
+\hfill
+\DatestampYMD{2017}{08}{01} -- \DatestampYMD{2018}{08}{01} 
+\GapNoBreak
+\textbf{College Representative}, Duke NUS Benjamin Sheares College
+\hfill
+\DatestampYMD{2017}{08}{01} -- \DatestampYMD{2019}{07}{01} 
+\GapNoBreak
+\textbf{Clinical Peer Tutor}, Longitudinal Integrated Clerkship
+\hfill
+\DatestampYMD{2017}{10}{01} -- \DatestampYMD{2018}{08}{01} 
+\GapNoBreak
+\textbf{Teacher Advisor}, Red Cross Youth NUS Chapter
+\hfill
+\DatestampYMD{2014}{06}{01} -- Present
+
+\section
+{Languages}
+{Languages}
+{PDF:Languages}
+
+English, Chinese: Expert business proficiency
+\end{body}
+
+%%%%%%%%%%%
+% CV NOTE %
+%%%%%%%%%%%
+
+\label{LastPage}~
+\end{document}
